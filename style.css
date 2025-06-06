@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Just+Me+Again+Down+Here&display=swap');
+
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Cabeçalho (caso queira manter) */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  padding: 1rem 2rem;
+}
+
+.logo img {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navigation a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navigation a:hover {
+  color: #c80000;
+}
+
+.social-icons a {
+  color: #fff;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+}
+
+.social-icons a:hover {
+  color: #00bfff;
+}
+
+/* Seção de cortes */
+.cortes {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.titulo-cortes {
+  position: relative;
+  display: inline-block;
+  font-family: Italianno;
+  font-size: 3.5rem;
+}
+
+.titulo-cortes::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #c80000;
+  margin: 0.5rem auto 0;
+}
+
+.cortes-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas fixas */
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto 0; /* espaçamento do título para o grid */
+}
+
+.corte {
+  background-color: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 1rem;
+}
+
+.corte img {
+  width: 100%;
+  border-radius: 60px;
+  height:420px;
+  border: 1px solid #c80000;
+  margin-top: 10px;
+  display: block;
+}
+.corte img:hover {
+  transform: scale(1.05); /* pequeno zoom ao passar o mouse */
+}
+
+.corte h3 {
+  color: #c80000;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.corte p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #ddd;
+  margin: 0;
+}
