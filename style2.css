@@ -1,67 +1,178 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.header {
+    background-color: black;
+    border-bottom: 3px solid #8B0000; /* vermelho escuro */
+    display: flex;
+    align-items: center;
+    gap: 190px;
+    font-family: 'Arial', sans-serif;
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
 }
-
+.logo img {
+    height: 120px;
+    width: 133px;
+    margin-left: 25vw;
+}
+.navigation ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+.navigation a:hover {
+    color: #8B0000;
+}
+.social-icons {
+    gap: 10px;
+    display: flex;
+    border-left: 2px solid white;
+    padding-left: 10px;
+}
+.social-icons a {
+    color: white;
+    font-size: 2.5rem;
+    transition: color 0.3s ease;
+}
+.social-icons a:hover {
+    color: #8B0000;
+}
 body {
-  background-color: #000;
-  font-family: Arial, sans-serif;
-  color: #fff;
+    background-color: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.produtos {
+.produto-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 40px;
+    padding-top: 100px;
+}
+
+.imagem-produto img {
+    width: 300px;
+    border-radius: 8px;
+      margin-top: 50px;
+}
+
+.descricao-produto {
+    max-width: 600px;
+}
+
+.descricao-produto h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.preco {
+    font-size: 28px;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+}
+.botao {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.botao.agendar {
+    background-color: #c0392b;
+    margin-left: 10px;
+}
+
+.botao:hover {
+    opacity: 0.9;
+}
+
+.seta-proxima {
+    background-color: #000;           /* Fundo preto */
+    color: #e74c3c;                  /* Vermelho forte */
+    border: 2px solid #e74c3c;       /* Borda vermelha */
+    border-radius: 50%;              /* Deixa arredondada como um botão circular */
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    position: fixed;    /* Fixa na tela */
+    right: 20px;        /* Distância da borda direita */
+    top: 50%;           /* Centralizada na altura */
+}
+
+.seta-proxima:hover {
+    background-color: #8B0000;       /* Vermelho escuro no hover */
+    color: white;
+    transform: scale(1.1);            /* Efeito de zoom ao passar o mouse */
+}
+
+.produtos-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 2rem;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 10px;
 }
 
 .produto {
   background-color: #111;
   border-radius: 10px;
   text-align: center;
-  padding: 1rem;
-  width: 180px;
-  position: relative;
+  padding: 15px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
 }
 
-.produto .nome {
-  background-color: #999;
-  color: #000;
-  font-size: 0.8rem;
-  padding: 0.3rem 0.5rem;
-  border-radius: 20px;
-  margin-bottom: 0.5rem;
+.produto:hover {
+  border-color: #c80000;
+  
 }
 
 .produto img {
   width: 100%;
-  border-radius: 10px;
-  height: 150px;
-  object-fit: contain;
-  transition: transform 0.3s;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
-.produto img:hover {
-  transform: scale(1.05);
+.produto h3 {
+  font-size: 1rem;
+  margin: 10px 0;
 }
 
 .produto .preco {
-  margin-top: 0.5rem;
-  color: #fff;
   font-weight: bold;
+  margin-bottom: 15px;
 }
 
-@media (max-width: 768px) {
-  .produtos {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.produto button {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-@media (max-width: 480px) {
-  .produtos {
-    grid-template-columns: 1fr;
-  }
+.produto button:hover {
+  background-color: #c80000;
 }
