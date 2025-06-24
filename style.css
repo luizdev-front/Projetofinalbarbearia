@@ -141,3 +141,161 @@ body {
   color: #ddd;
   margin: 0;
 }
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navigation {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    display: none;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #8B0000;
+  }
+
+  .navigation ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navigation.show {
+    display: block;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+    border-left: none;
+    padding-left: 0;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-toggle {
+    font-size: 1.5rem;
+  }
+
+  .logo img {
+    height: 50px;
+    width: 50px;
+  }
+}
+.header {
+  background-color: black;
+  border-bottom: 3px solid #8B0000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: #8B0000;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  border-left: 2px solid white;
+  padding-left: 15px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.8rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #8B0000;
+}
+
+/* Responsividade para tablet e celular */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 10px 5px 10px;
+  }
+
+  .logo img {
+    height: 60px;
+    width: 60px;
+    margin-bottom: 10px;
+  }
+
+  .navigation ul {
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .social-icons {
+    border-left: none;
+    padding-left: 0;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation a {
+    font-size: 1rem;
+  }
+
+  .social-icons a {
+    font-size: 1.4rem;
+  }
+
+  .logo img {
+    height: 50px;
+    width: 50px;
+  }
+}
